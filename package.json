@@ -1,0 +1,8 @@
+{
+  "name": "mockapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:UlysC/mockapi.git",
+  "author": "UlysC <ulys.chambard@gmail.com>",
+  "license": "MIT"
+}
