@@ -1,4 +1,4 @@
-exports.handler = event => {
+exports.handler = async event => {
   const e = [
     {
       token: "DEALER_EXPIRED",
