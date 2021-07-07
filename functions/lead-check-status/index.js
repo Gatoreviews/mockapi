@@ -23,6 +23,6 @@ exports.handler = async event => {
       "Access-Control-Allow-Methods": "GET",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(e.find(el => el.token == token && el.body) || {}),
+    body: JSON.stringify(e.find(el => el.token == token ) || {}),
   }
 }
