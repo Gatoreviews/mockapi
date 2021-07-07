@@ -4,13 +4,11 @@ exports.handler = async event => {
       token: "ALREADY_TREATED",
       status: 0,
       location: "location1",
-      has_been_contacted: "",
     },
     {
       token: "NOT_TREATED",
       status: 1,
       location: "location1",
-      has_been_contacted: "",
     },
   ]
 

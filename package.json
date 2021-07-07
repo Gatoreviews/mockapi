@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:UlysC/mockapi.git",
   "author": "UlysC <ulys.chambard@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
