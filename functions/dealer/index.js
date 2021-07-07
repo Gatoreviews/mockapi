@@ -54,9 +54,23 @@ exports.handler = async event => {
       revert_link: "",
       lead_accepted: "",
     },
+    {
+      token: "LEAD_SATISFIED",
+      status: 1,
+      has_been_contacted: 1,
+      error: "",
+      body: { satisfied: "1", has_been_contacted: "1" },
+    },
+    {
+      token: "LEAD_SATISFIED_ALREADY_TREATED",
+      status: 0,
+      location: "location1",
+      has_been_contacted: 1,
+      body: { satisfied: "1", has_been_contacted: "1" },
+    },
   ]
 
-  const token = event.queryStringParameters.token 
+  const token = event.queryStringParameters.token
   return {
     statusCode: 200,
     headers: {
@@ -65,6 +79,6 @@ exports.handler = async event => {
       "Access-Control-Allow-Methods": "GET",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(e.find(el => el.token == token) || {}),
+    body: JSON.stringify(e.find(el => el.token == token && el.body ? el.body == JSON.parse(event.body) : true) || {}),
   }
 }
